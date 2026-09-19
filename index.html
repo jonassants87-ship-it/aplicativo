@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Seleção</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+
+    <main class="card-container">
+        <header class="card-header">
+            <h1>Verificação de Perfil</h1>
+            <p>Insira seus dados para validação da vaga</p>
+        </header>
+
+        <form id="vagaForm">
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" required placeholder="Ex: Lucas Silva" autocomplete="off">
+            </div>
+
+            <div class="input-group">
+                <label for="idade">Idade</label>
+                <input type="number" id="idade" required placeholder="Ex: 22" min="0">
+            </div>
+
+            <div class="input-group">
+                <label for="altura">Altura (metros)</label>
+                <input type="number" step="0.01" id="altura" required placeholder="Ex: 1.75" min="0">
+            </div>
+
+            <button type="submit" class="btn-neon">Validar Candidatura</button>
+        </form>
+    </main>
+
+    <!-- Modal Popup -->
+    <div id="popupModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div id="modalIcon" class="modal-icon"></div>
+            <h2 id="modalTitle">Resultado</h2>
+            <p id="modalMessage"></p>
+            <button id="modalCloseBtn" class="btn-neon">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
+<!---alterações do arquivo html-->
